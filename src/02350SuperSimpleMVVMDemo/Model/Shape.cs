@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02350SuperSimpleMVVMDemo.Model
+﻿namespace _02350SuperSimpleMVVMDemo.Model
 {
     // The Shape class descripes a shape with a position (X and Y), and a size (Width and Height).
     public class Shape

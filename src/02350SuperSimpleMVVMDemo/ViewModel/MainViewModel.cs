@@ -1,10 +1,5 @@
 ﻿using _02350SuperSimpleMVVMDemo.Model;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02350SuperSimpleMVVMDemo.ViewModel
 {
@@ -46,14 +41,14 @@ namespace _02350SuperSimpleMVVMDemo.ViewModel
             // Also a constructor could be created for the Shape class that takes the parameters (X, Y, Width and Height), 
             //  and the following could be done:
             //   new Shape(30, 40, 80, 80);
-            Shapes = new ObservableCollection<Shape>() { 
-                new Shape() { X = 30, Y = 40, Width = 80, Height = 80 }, 
-                new Shape() { X = 130, Y = 140, Width = 100, Height = 100 } 
+            Shapes = new ObservableCollection<Shape>() {
+                new Shape() { X = 30, Y = 40, Width = 80, Height = 80 },
+                new Shape() { X = 130, Y = 140, Width = 100, Height = 100 }
             };
             // Here the list of Lines is filled with 1 Line that connects the 2 Shapes in the Shapes collection.
             // The Shapes[0] syntax (which is normal for arrays), can be used with many types of collections in .NET.
-            Lines = new ObservableCollection<Line>() { 
-                new Line() { From = Shapes[0], To = Shapes[1] } 
+            Lines = new ObservableCollection<Line>() {
+                new Line() { From = Shapes[0], To = Shapes[1] }
             };
         }
 
