@@ -1,14 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <RootNamespace>_02350SuperSimpleMVVMDemo</RootNamespace>
-    <UseWPF>true</UseWPF>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<RootNamespace>_02350SuperSimpleMVVMDemo</RootNamespace>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>Icon.ico</ApplicationIcon>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>true</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ApplicationDefinition Include="View\App.xaml" />
-  </ItemGroup>
+	<ItemGroup>
+		<Using Include="_02350SuperSimpleMVVMDemo.Model"/>
+		<Using Include="System.Collections.ObjectModel"/>
+		<Using Include="System.Windows"/>
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ApplicationDefinition Include="View\App.xaml" />
+	</ItemGroup>
+	
 </Project>
