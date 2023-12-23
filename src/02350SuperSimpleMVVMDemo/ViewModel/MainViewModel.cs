@@ -7,12 +7,14 @@ public class MainViewModel
 
     public MainViewModel()
     {
-        Shapes = new() {
+        Shapes = [
             new(X: 30, Y: 40, Width: 80, Height: 80),
-            new(X: 130, Y: 140, Width: 100, Height: 100)
-        };
-        Lines = new() {
-            new(From: Shapes[0], To: Shapes[1])
-        };
+            new(X: 230, Y: 340, Width: 100, Height: 100),
+            new(X: 330, Y: 40, Width: 90, Height: 90)
+        ];
+        Lines = [
+            new(From: Shapes[0], To: Shapes[1]),
+            new(From: Shapes[1], To: Shapes[2])
+        ];
     }
 }

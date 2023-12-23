@@ -4,15 +4,18 @@
              xmlns:m="clr-namespace:_02350SuperSimpleMVVMDemo.Model"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <DataTemplate DataType="{x:Type m:Shape}">
-            <Canvas>
-                <Ellipse Fill="Blue" Stroke="Purple" StrokeThickness="6" StrokeDashArray="3" Canvas.Left="{Binding X}" Canvas.Top="{Binding Y}" Width="{Binding Width}" Height="{Binding Height}"/>
-            </Canvas>
-        </DataTemplate>
         <DataTemplate DataType="{x:Type m:Line}">
-            <Canvas>
-                <Line Stroke="Red" X1="{Binding From.CenterX}" Y1="{Binding From.CenterY}" X2="{Binding To.CenterX}" Y2="{Binding To.CenterY}" StrokeThickness="10"/>
-            </Canvas>
+            <Line Stroke="Red" X1="{Binding From.CenterX}" Y1="{Binding From.CenterY}" X2="{Binding To.CenterX}" Y2="{Binding To.CenterY}" StrokeThickness="10"/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type m:Shape}">
+            <Ellipse Fill="Blue" Stroke="Purple" StrokeThickness="6" StrokeDashArray="3" Width="{Binding Width}" Height="{Binding Height}"/>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="CanvasPanel">
+            <Canvas/>
+        </ItemsPanelTemplate>
+        <Style TargetType="ContentPresenter" x:Key="CanvasPositionStyle">
+            <Setter Property="Canvas.Left" Value="{Binding X}"/>
+            <Setter Property="Canvas.Top" Value="{Binding Y}"/>
+        </Style>
     </Application.Resources>
 </Application>

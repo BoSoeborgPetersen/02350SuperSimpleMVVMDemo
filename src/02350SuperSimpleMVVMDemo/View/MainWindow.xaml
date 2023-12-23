@@ -7,7 +7,7 @@
         <vm:MainViewModel />
     </Window.DataContext>
     <Grid>
-        <ItemsControl ItemsSource="{Binding Lines}"/>
-        <ItemsControl ItemsSource="{Binding Shapes}"/>
+        <ItemsControl ItemsSource="{Binding Lines}" ItemsPanel="{StaticResource CanvasPanel}"/>
+        <ItemsControl ItemsSource="{Binding Shapes}" ItemsPanel="{StaticResource CanvasPanel}" ItemContainerStyle="{StaticResource CanvasPositionStyle}"/>
     </Grid>
 </Window>
